@@ -117,7 +117,7 @@ const ExternalPlugin = props => {
   )
   // 默认关闭NProgress
   const ENABLE_NPROGRSS = siteConfig('ENABLE_NPROGRSS', false)
-  const COZE_BOT_ID = siteConfig('COZE_BOT_ID')
+  const COZE_BOT_ID = process.env.COZE_BOT_ID || siteConfig('COZE_BOT_ID')
   const HILLTOP_ADS_META_ID = siteConfig(
     'HILLTOP_ADS_META_ID',
     null,
