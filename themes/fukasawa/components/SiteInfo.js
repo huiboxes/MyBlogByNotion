@@ -9,7 +9,7 @@ function SiteInfo({ title }) {
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
 
   return (
-    <footer className='relative leading-6 justify-start w-full text-gray-600 dark:text-gray-300 text-xs '>
+    <footer className='relative leading-6 justify-start w-full text-gray-600 dark:text-gray-300 text-xs text-center'>
       <span>
         © {`${copyrightDate}`}
         <span>
