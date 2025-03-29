@@ -3,6 +3,8 @@ import { useRef, useState } from 'react'
 import Logo from './Logo'
 import { MenuList } from './MenuList'
 import SearchInput from './SearchInput'
+import DarkModeButton from '@/components/DarkModeButton'
+
 
 /**
  * 顶部导航
@@ -45,6 +47,8 @@ const Header = props => {
 
           {/* 右侧功能 */}
           <div className='mr-1 flex justify-end items-center text-sm space-x-4 font-serif dark:text-gray-200'>
+            <DarkModeButton />
+
             <div
               onClick={toggleMenuOpen}
               className='cursor-pointer text-lg p-2'>

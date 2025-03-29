@@ -143,18 +143,21 @@ function AsideLeft(props) {
 
         <section className='flex flex-col text-gray-600'>
           <div className='w-12 my-4' />
-          <MenuList {...props} />
+          <SearchInput {...props} />
         </section>
 
         <section className='flex flex-col text-gray-600'>
           <div className='w-12 my-4' />
-          <SearchInput {...props} />
+          <MenuList {...props} />
         </section>
 
-        <section className='flex flex-col dark:text-gray-300'>
-          <div className='w-12 my-4' />
-          <Announcement post={notice} />
-        </section>
+        {
+          siteConfig('SHOWANNOUCEMENT') && 
+          <section className='flex flex-col dark:text-gray-300'>
+            <div className='w-12 my-4' />
+            <Announcement post={notice} />
+          </section>
+        }
 
         <section>
           <MailChimpForm />

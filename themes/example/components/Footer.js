@@ -19,7 +19,7 @@ export const Footer = props => {
             <BeiAnSite />
             <BeiAnGongAn />
           </div>
-          <PoweredBy />
+          {/* <PoweredBy /> */}
         </div>
       </div>
     </footer>
