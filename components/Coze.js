@@ -1,6 +1,7 @@
 import { siteConfig } from '@/lib/config'
 import { loadExternalResource } from '@/lib/utils'
 import { useEffect } from 'react'
+import BLOG from '@/blog.config'
 
 /**
  * Coze-AI机器人
@@ -12,7 +13,7 @@ export default function Coze() {
     'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.6/libs/cn/index.js'
   )
   const title = siteConfig('COZE_TITLE', 'NotionNext助手')
-  const botId = siteConfig('COZE_BOT_ID')
+  const botId = BLOG.COZE_BOT_ID || siteConfig('COZE_BOT_ID')
 
   const loadCoze = async () => {
     await loadExternalResource(cozeSrc)
